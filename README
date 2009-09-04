@@ -1,0 +1,22 @@
+This is my code for Google Code Jam 2009:
+
+http://code.google.com/codejam/ as of this writing
+could become http://code.google.com/codejam/2009/ next year
+
+updated only _after_ completion of a round
+
+I'd like to add multiple solutions (in c/c++, python, haskell, etc.)
+for a same problem.
+
+
+LICENSE: Beerware License  http://en.wikipedia.org/wiki/Beerware
+
+/*
+ * ----------------------------------------------------------------------------
+ * "THE BEER-WARE LICENSE":
+ * <alecsk@gmail.com> wrote this. As long as you retain this notice you can do
+ * whatever you want with this stuff.  If we meet some day, and you think this
+ * stuff is worth it, you can buy me a beer in return Alecs King
+ * ----------------------------------------------------------------------------
+ */
+

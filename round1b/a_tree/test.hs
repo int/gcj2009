@@ -14,17 +14,16 @@ get s (Leaf d) p = p * d
 get s (Node d str a b) p = if member str s then get s a p' else get s b p'
     where p' = p * d
 
-double = many1 (char '.' <|> digit) -- not generally correct but ok for this problem
 word = many1 letter
 lexer = makeTokenParser emptyDef
 pare = parens lexer
+double = float lexer
 
 tree = pare t
-    where t = double >>= left
-
-left ds = do {s <- word; a <- tree; b <- tree; return (Node d s a b)}
+    where t = do {spaces; d <- double; spaces; r <- left d; spaces; return r}
+          
+left d = do {s <- word; spaces; a <- tree; spaces; b <- tree; return (Node d s a b)}
     <|> return (Leaf d)
-    where d = read ds
 
 right (Right x) = x
 
@@ -34,7 +33,7 @@ main = do
         printf "Case #%d:\n" i
         l <- readLn
         strs <- replicateM l getLine
-        let t = right $ parse tree "" (L.filter (not . isSpace) $ unlines strs)
+        let t = right $ parse tree "" (unlines strs)
         a <- readLn
         forM_ [1..a::Int] $ \_ -> do
             line <- getLine

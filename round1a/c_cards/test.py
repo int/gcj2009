@@ -18,7 +18,7 @@ def bino(n, k):
     return bino(n - 1, k - 1) + bino(n - 1, k)
 
 def get():
-    c, n = map(lambda x: int(x), raw_input().strip().split())
+    c, n = map(int, raw_input().strip().split())
     @memo
     def f(k): # expectation when already got k different kinds
         if k == c: return 0

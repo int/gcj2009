@@ -10,7 +10,7 @@ def memo(func):
         return r
     return f
 
-def readints(): return map(lambda x: int(x), raw_input().strip().split())
+def readints(): return map(int, raw_input().strip().split())
 
 def get():
     p, q = readints()

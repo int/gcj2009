@@ -2,7 +2,7 @@
 
 import re
 
-l, d, n = map(lambda x: int(x), raw_input().strip().split())
+l, d, n = map(int, raw_input().strip().split())
 words = []
 for x in xrange(d):
     words.append(raw_input().strip())

@@ -15,13 +15,11 @@ doit()
 	if (!next_permutation(d.begin(), d.end())) {
 		d.push_back(0);
 		sort(d.begin(), d.end());
-		if (d[0] == 0) {
-			for (int i = 1; ; i++)
-				if (d[i]) {
-					swap(d[0], d[i]);
-					break;
-				}
-		}
+		for (int i = 1; ; i++)
+			if (d[i]) {
+				swap(d[0], d[i]);
+				break;
+			}
 	}
 	for (int i = 0; i < d.size(); i++)
 		printf("%d", d[i]);

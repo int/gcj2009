@@ -1,6 +1,4 @@
-import Data.Char
 import Data.Set
-import Data.List as L
 import Control.Monad
 import Text.Printf
 import Text.ParserCombinators.Parsec

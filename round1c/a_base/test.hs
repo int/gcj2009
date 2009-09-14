@@ -16,5 +16,4 @@ get str = g $ foldl f empty str
 
 main = do
     t <- readLn
-    forM_ [1..t::Int] $ \i -> do
-        printf "Case #%d: %d\n" i . get =<< getLine
+    forM_ [1..t::Int] $ \i -> printf "Case #%d: %d\n" i . get =<< getLine

@@ -1,5 +1,5 @@
 // shortest path -- state: (position, value).
-// 
+//
 // this implemetation is a plain Dijkstra using STL priority queue
 // non-optimized -- a lot of (maybe unnecessary) copy.
 //

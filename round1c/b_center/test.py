@@ -12,17 +12,11 @@ def get():
     a = vx**2 + vy**2 + vz**2
     b = 2 * (vx * x + vy * y + vz * z)
     c = x**2 + y**2 + z**2 # >= 0
-
-    # linear
-    if a == 0:
-        if b >= 0: return (sqrt(c) / n, 0)
-        return (0, c / float(-b))
-
-    # quadratic
-    t = -b / (2.0 * a)
-    if t < 0: return (sqrt(c) / n, 0)
-    d = a * t**2 + b * t + c # should always >= 0 for this problem
-    if d < 0: d = 0 # fix precision err
+    t = 0 # a is zero --> vx vy vz all are zeros --> b is zero
+    if a: t = -b / (2.0 * a)
+    if t < 0: t = 0
+    d = a * t**2 + b * t + c
+    if d < 0: d = 0
     return (sqrt(d) / n, t)
         
 n = input()

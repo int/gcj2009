@@ -14,13 +14,11 @@ def get():
             else:
                 next += 1
     a = 0
-    p = 1
     b = next
     if b < 2: # at least 2 base
         b = 2 
-    for x in reversed(s):
-        a += d[x] * p
-        p *= b
+    for x in s:
+        a = a * b + d[x]
     return a
 
 n = input()

@@ -12,7 +12,7 @@ get (x:y:z:vx:vy:[vz]) n = (d, t)
           t' 0 = 0 -- when a is 0, b is also 0
           t' _ = -b' / (2*a')
           d = fix $ sqrt(a'*t^2 + b'*t + c') / n'
-          fix x = max 1e-18 x -- fix: must be positive
+          fix = max 1e-18 -- must be positive
 
 readnum :: Read a => IO [a]
 readnum = map read . words <$> getLine

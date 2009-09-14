@@ -15,7 +15,7 @@ get (x:y:z:vx:vy:[vz]) n = (d, t)
           fix x = max 1e-18 x -- fix: must be positive
 
 readnum :: Read a => IO [a]
-readnum = map read . words <$> getLine 
+readnum = map read . words <$> getLine
 
 main = do
     t <- readLn

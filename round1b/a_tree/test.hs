@@ -19,7 +19,7 @@ double = float lexer
 
 tree = pare t
     where t = do {spaces; d <- double; spaces; r <- left d; spaces; return r}
-          
+
 left d = do {s <- word; spaces; a <- tree; spaces; b <- tree; return (Node d s a b)}
     <|> return (Leaf d)
 

@@ -16,7 +16,7 @@ def get():
     a = 0
     b = next
     if b < 2: # at least 2 base
-        b = 2 
+        b = 2
     for x in s:
         a = a * b + d[x]
     return a

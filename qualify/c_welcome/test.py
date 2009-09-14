@@ -17,7 +17,7 @@ def doit(t):
     a = "welcome to code jam";
     b = raw_input().strip()
     @memo
-    def f(n, m): 
+    def f(n, m):
         if n == -1: return 1
         if n < 0 or m < 0: return 0
         r = f(n, m - 1)

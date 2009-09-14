@@ -18,7 +18,7 @@ def get():
     d = a * t**2 + b * t + c
     if d < 0: d = 0
     return (sqrt(d) / n, t)
-        
+
 n = input()
 for x in xrange(1, n + 1):
     d, t = get()

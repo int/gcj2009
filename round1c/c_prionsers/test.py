@@ -20,7 +20,7 @@ def get():
         if i == j: return 0
         return min(f(i, k) + f(k + 1, j) + id[j+1] - id[i] - 2 for k in xrange(i, j))
     return f(0, q)
-        
+
 n = input()
 for x in xrange(1, n + 1):
     print "Case #%d: %d" % (x, get())

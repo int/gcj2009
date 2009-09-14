@@ -13,7 +13,7 @@ get id = f 0
             where a = listArray (0, length id - 1) id
 
 readints :: IO [Int]
-readints = map read . words <$> getLine 
+readints = map read . words <$> getLine
 
 main = do
     n <- readLn

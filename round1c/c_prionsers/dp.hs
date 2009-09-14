@@ -17,7 +17,7 @@ get id q = do
                     return $ a + b + id!!(j+1) - id!!i - 2
 
 readints :: IO [Int]
-readints = map read . words <$> getLine 
+readints = map read . words <$> getLine
 
 main = do
     n <- readLn

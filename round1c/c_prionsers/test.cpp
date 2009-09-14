@@ -1,7 +1,4 @@
 #include <cstdio>
-#include <vector>
-
-using namespace std;
 
 static int	id[104], best[104][104];
 

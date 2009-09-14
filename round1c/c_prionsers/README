@@ -8,3 +8,4 @@ same top-down memo algorithms:
 
 bottom-up DP:
 	dp.cpp -- faster than test.cpp by a factor of 2
+	dp.hs -- using IOArray: faster than test.hs but slower than dp.cpp

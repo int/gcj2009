@@ -2,7 +2,7 @@ import Text.Printf
 import Text.Regex.PCRE
 import Control.Monad
 
-get p = length . filter (\s -> s =~ p)
+get p = length . filter (=~ p)
 reg p = "^" ++ map (\x -> case x of '(' -> '['; ')' -> ']'; _ -> x) p ++ "$"
 
 main = do

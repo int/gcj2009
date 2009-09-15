@@ -114,11 +114,11 @@ doit()
 		getnext(p, w, next);
 		for (int i = 0; i < next.size(); i++) {
 			int np = next[i], x = sq[np / w][np % w], nv = v + t * (x - '0');
+			string zz = z;
+			zz += x;
 			if (best[np].find(nv) == best[np].end() ||
 			    s < best[np][nv] ||
-			    (s == best[np][nv] && z < path[np][nv])) {
-				string zz = z;
-				zz += x;
+			    (s == best[np][nv] && zz < path[np][nv])) {
 				//cout << z << " to " << zz << endl;
 				best[np][nv] = s;
 				path[np][nv] = zz;

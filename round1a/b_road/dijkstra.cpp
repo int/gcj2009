@@ -22,32 +22,16 @@ static int S[SIZE][SIZE], W[SIZE][SIZE], T[SIZE][SIZE];
 static int
 waitns(int cur, int s, int w, int t)
 {
-	if (cur < t) {
-		if (t - cur <= w)
-			return t - cur;
-		return 0;
-	} else {
-		cur = (cur - t) % (s + w);
-		if (cur < s)
-			return 0;
-		return s + w - cur;
-	}
+	cur = ((cur - t) % (s + w) + s + w) % (s + w);
+	return cur < s ? 0 : s + w - cur;
 }
 
 // wait time to cross west-east
 static int
 waitwe(int cur, int s, int w, int t)
 {
-	if (cur < t) {
-		if (t - cur <= w)
-			return 0;
-		return t - cur - w;
-	} else {
-		cur = (cur - t) % (s + w);
-		if (cur < s)
-			return s - cur;
-		return 0;
-	}
+	cur = ((cur - t) % (s + w) + s + w) % (s + w);
+	return cur < s ? s - cur : 0;
 }
 
 static inline int odd(int x) { return x & 1; }

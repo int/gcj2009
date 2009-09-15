@@ -1,11 +1,14 @@
 Model: `classic' DP -- Matrix Chain Multiplication / Optimal Binary Search Tree
 
-same top-down memo algorithms:
+same top-down O(Q^3) memo algorithms:
 
 	test.py
 	test.hs
 	test.cpp -- far more faster
 
 bottom-up DP:
-	dp.cpp -- faster than test.cpp by a factor of 2
-	dp.hs -- using IOArray: faster than test.hs but slower than dp.cpp
+
+	dp.cpp -- O(Q^3) faster than test.cpp by a factor of 2
+	dp.hs -- O(Q^3) using IOArray: faster than test.hs but slower than dp.cpp
+	o2.cpp -- O(Q^2) fastest
+	o2.py -- O(Q^2) you can see how it is faster than test.py
